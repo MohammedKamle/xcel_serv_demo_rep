@@ -10,8 +10,8 @@ import java.net.URL;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 public class SampleTest {
-    public static final String AUTOMATE_USERNAME = "mohammedk1";
-    public static final String AUTOMATE_ACCESS_KEY = "spBCpUJaVTnvxxssFtEJ";
+    public static final String AUTOMATE_USERNAME = "YOUR_USERNAME";
+    public static final String AUTOMATE_ACCESS_KEY = "YOUR_ACCESSKEY";
     public static final String URL = "https://" + AUTOMATE_USERNAME + ":" + AUTOMATE_ACCESS_KEY + "@hub-cloud.browserstack.com/wd/hub";
     public static void main(String[] args) throws Exception {
         DesiredCapabilities caps = new DesiredCapabilities();
