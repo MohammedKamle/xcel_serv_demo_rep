@@ -13,8 +13,9 @@ import java.net.URL;
 import java.sql.Timestamp;
 
 public class JenkinsSample {
-    public static final String AUTOMATE_USERNAME = "mohammedk1";
-    public static final String AUTOMATE_ACCESS_KEY = "spBCpUJaVTnvxxssFtEJ";
+    public static final String AUTOMATE_USERNAME = System.getenv("BROWSERSTACK_USERNAME");
+    public static final String AUTOMATE_ACCESS_KEY = System.getenv("BROWSERSTACK_ACCESS_KEY");
+    public static final String BUILD = System.getenv("BROWSERSTACK_BUILD_NAME");
     public static final String URL = "https://" + AUTOMATE_USERNAME + ":" + AUTOMATE_ACCESS_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
 
@@ -33,7 +34,7 @@ public class JenkinsSample {
         // caps.setCapability("browserstack.use_w3c", "true");
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
        // caps.setCapability("name", "testLogsTest " + timestamp); // test name
-        //caps.setCapability("build", "LillyPulotzer"); // CI/CD job or build name
+        caps.setCapability("build", BUILD); // CI/CD job or build name
         caps.setCapability("browserstack.idleTimeout", "300");
 
         WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
