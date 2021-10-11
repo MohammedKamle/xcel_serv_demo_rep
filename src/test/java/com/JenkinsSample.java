@@ -32,8 +32,8 @@ public class JenkinsSample {
         caps.setCapability("browserstack.console", "verbose");
         // caps.setCapability("browserstack.use_w3c", "true");
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        caps.setCapability("name", "testLogsTest " + timestamp); // test name
-        caps.setCapability("build", "LillyPulotzer"); // CI/CD job or build name
+       // caps.setCapability("name", "testLogsTest " + timestamp); // test name
+        //caps.setCapability("build", "LillyPulotzer"); // CI/CD job or build name
         caps.setCapability("browserstack.idleTimeout", "300");
 
         WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
